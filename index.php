@@ -15,39 +15,37 @@
             <div class="col-12">
                 <div class="titolo text-center py-2">
                     <h1>Genera una password sicura</h1>
-                    <div class="form">
-                        <form method="get">
-                            <label for="length">Scegli la lunghezza della password:</label>
-                            <input type="number" id="length" name="length" min="1" max="10">
-                            <input type="submit" value="Genera">
-                        </form>
-                    </div>
-                    <div class="boxPassword">
-                        <?php
+                    <form method="get">
+                        <label for="length">Scegli la lunghezza della password:</label>
+                        <input type="number" id="length" name="length" min="1" max="10">
 
-                        function generatePassword($length)
-                        {
-                            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
-                            $charactersLength = strlen($characters);
-                            $randomPassword = '';
-                            for ($i = 0; $i < $length; $i++) {
-                                $randomPassword .= $characters[rand(0, $charactersLength - 1)];
-                            }
-                            return $randomPassword;
-                        }
+                        <br>
 
-                        if (isset($_GET['length'])) {
-                            $length = $_GET['length'];
-                            $password = generatePassword($length);
-                            echo "La tua password casuale è: $password";
-                        }
+                        <input type="checkbox" id="useNumbers" name="useNumbers">
+                        <label for="useNumbers">Usa numeri</label>
 
+                        <input type="checkbox" id="useLetters" name="useLetters">
+                        <label for="useLetters">Usa lettere</label>
 
-                        ?>
-                    </div>
+                        <input type="checkbox" id="useSymbols" name="useSymbols">
+                        <label for="useSymbols">Usa simboli</label>
+
+                        <br>
+
+                        <input type="checkbox" id="sameCharacters" name="sameCharacters">
+                        <label for="sameCharacters">Permetti ripetizione di caratteri uguali</label>
+
+                        <br>
+
+                        <input type="submit" value="Genera">
+                    </form>
+                </div>
+                <div class="boxPassword">
+                    <?php include 'function.php'; ?>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
