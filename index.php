@@ -21,18 +21,18 @@
 
                         <br>
 
-                        <input type="checkbox" id="useNumbers" name="useNumbers">
+                        <input type="checkbox" id="useNumbers" name="useNumbers" checked>
                         <label for="useNumbers">Usa numeri</label>
 
-                        <input type="checkbox" id="useLetters" name="useLetters">
+                        <input type="checkbox" id="useLetters" name="useLetters" checked>
                         <label for="useLetters">Usa lettere</label>
 
-                        <input type="checkbox" id="useSymbols" name="useSymbols">
+                        <input type="checkbox" id="useSymbols" name="useSymbols" checked>
                         <label for="useSymbols">Usa simboli</label>
 
                         <br>
 
-                        <input type="checkbox" id="sameCharacters" name="sameCharacters">
+                        <input type="checkbox" id="sameCharacters" name="sameCharacters" checked>
                         <label for="sameCharacters">Permetti ripetizione di caratteri uguali</label>
 
                         <br>
